@@ -23,6 +23,7 @@ dataset$Sub_metering_3 <- as.numeric(as.character(dataset$Sub_metering_3))
 plot(dataset$datetime, dataset$Sub_metering_1, type = 'l', xlab = '', ylab = 'energy sub metering')
 points(dataset$datetime, dataset$Sub_metering_2, type = 'l', col = 'red')
 points(dataset$datetime, dataset$Sub_metering_3, type = 'l', col = 'blue')
-legend('topright', lwd = 1, col = c('black', 'red', 'blue'), legend = names(dataset[7:9]))
+legend('topright', lwd = 1, col = c('black', 'red', 'blue'), 
+       legend = names(dataset[7:9]), bty = 'n', seg.len = 3, pt.cex = 1, cex = 0.8, inset = 0.1)
 dev.copy(png, filename = 'plot3.png', width = 480, height = 480)
 dev.off()
